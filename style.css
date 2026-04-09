@@ -1,0 +1,212 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* ── Tokens ── */
+:root {
+    --primary-color: #BFA181;
+    --secondary-color: #178582;
+    --tertiary-color: #0A1828;
+    --background-color: #000000;
+    --font-family: 'Roboto', Arial, sans-serif;
+    --split: 50%;
+}
+
+/* ── Base ── */
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--background-color);
+    color: var(--primary-color);
+    font-family: var(--font-family);
+    padding-top: 59px;
+}
+
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.header__nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;;
+    display: grid;
+    grid-template-columns: var(--split) 1fr;
+    align-items: center;
+    overflow: hidden;
+}
+
+.header__logo {
+    display: flex;
+    position: relative;
+    padding: 20px;
+}
+
+.header__logo a {
+    font-weight: 700;
+    font-size: 1rem;
+    letter-spacing: 0.08em;
+    position: relative;
+}
+
+.header__logo-overlay {
+    position: absolute;
+    inset: 0;
+    background-color: var(--tertiary-color);
+    z-index: -1;
+}
+
+.header__menu {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.header__menu a {
+    font-size: 0.8rem;
+    letter-spacing: 0.1em;
+    transition: color 200ms ease;
+}
+
+.header__menu a:hover {
+    color: var(--secondary-color);
+}
+
+.header__hamburger {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--primary-color);
+    font-size: 1.4rem;
+    cursor: pointer;
+    padding: 20px;
+}
+
+.home {
+    display: grid;
+    grid-template-columns: var(--split) 1fr;
+    flex: 1;
+    min-height: 100vh;
+}
+
+.home-left,
+.home-right {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.home-left {
+    justify-content: center;
+    gap: 16px;
+    padding: 60px 60px 60px 80px;
+}
+
+.home-left-overlay {
+    position: absolute;
+    inset: 0;
+    background-color: var(--tertiary-color);
+    z-index: -1;
+}
+
+.home-left h1,
+.home-left h2,
+.home-left p,
+.home-links {
+    position: relative;
+    width: 100%;
+    max-width: 520px;
+}
+
+.home-left h1 {
+    font-size: clamp(2.2rem, 4vw, 3rem);
+    font-weight: 700;
+    color: var(--primary-color);
+    line-height: 1.1;
+    letter-spacing: -0.01em;
+}
+
+.home-left h2 {
+    font-size: clamp(0.9rem, 1.5vw, 1.05rem);
+    font-weight: 400;
+    color: var(--secondary-color);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    margin-top: 8px;
+}
+
+.home-left p {
+    font-size: 0.9rem;
+    color: #8a9bb0;
+    line-height: 1.85;
+    margin-top: 20px;
+}
+
+.home-links {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-top: 32px;
+}
+
+.home-links a {
+    display: inline-block;
+    padding: 10px 22px;
+    border-radius: 4px;
+    font-size: 0.78rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    transition: all 200ms ease;
+}
+
+.home-links .resume {
+    background-color: var(--primary-color);
+    color: #0A1828;
+}
+
+.home-links .resume:hover {
+    background-color: #d4b896;
+}
+
+.home-links .github,
+.home-links .linkedin {
+    background: transparent;
+    border: 1px solid #2a3f55;
+    color: var(--primary-color);
+}
+
+.home-links .github:hover,
+.home-links .linkedin:hover {
+    border-color: var(--primary-color);
+    background: rgba(191, 161, 129, 0.08);
+}
+
+/* ── Footer ── */
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
