@@ -1,4 +1,4 @@
-# krishjeswal.web.app
+# krish-jeswal.web.app
 
 Personal portfolio and landing page.
 
