@@ -38,4 +38,4 @@ open index.html
 
 ## Deployment
 
-Hosted on Firebase. Live at [krishjeswal.web.app](https://krishjeswal.web.app)
+Hosted on Firebase. Live at [krishjeswal.web.app](https://krish-jeswal.web.app)
