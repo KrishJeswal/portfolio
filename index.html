@@ -7,11 +7,12 @@
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <title>Krish Jeswal — Portfolio</title>
 </head>
 <body>
+
     <header>
         <nav class="header__nav" aria-label="Main navigation">
             <div class="header__logo">
@@ -20,8 +21,8 @@
             </div>
             <ul class="header__menu">
                 <li><a href="#home">HOME</a></li>
-                <li><a href="#skills">SKILLS</a></li>
                 <li><a href="#projects">PROJECTS</a></li>
+                <li><a href="#skills">SKILLS</a></li>
                 <li><a href="#timeline">TIMELINE</a></li>
                 <li><a href="#contact">CONTACT</a></li>
             </ul>
@@ -29,9 +30,20 @@
                 &#9776;
             </button>
         </nav>
+
+        <div class="mobile-drawer" id="mobile-drawer">
+            <ul>
+                <li><a href="#home">HOME</a></li>
+                <li><a href="#projects">PROJECTS</a></li>
+                <li><a href="#skills">SKILLS</a></li>
+                <li><a href="#timeline">TIMELINE</a></li>
+                <li><a href="#contact">CONTACT</a></li>
+            </ul>
+        </div>
     </header>
 
     <main>
+
         <section id="home" class="home">
             <div class="home-left">
                 <h1>Hi, I'm Krish</h1>
@@ -44,26 +56,286 @@
                     to the developer communities I&rsquo;m part of, focusing on creating solutions
                     that are practical, efficient, and genuinely useful in real-world scenarios.</p>
                 <div class="home-links">
-                    <a href="assets/Krish_Resume.pdf" class="resume" download>Download my Resume</a>
+                    <a href="assets/Krish_Resume.pdf" class="resume" target="_blank" rel="noopener">Download Resume</a>
                     <a href="https://github.com/KrishJeswal" class="github" target="_blank" rel="noopener">GitHub</a>
                     <a href="https://linkedin.com/in/krishjeswal" class="linkedin" target="_blank" rel="noopener">LinkedIn</a>
                 </div>
                 <div class="home-left-overlay"></div>
             </div>
-            <div class="home-right"></div>
+
+            <div class="home-right">
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <span class="stat-card__value">7&plus;</span>
+                        <span class="stat-card__label">Shipped Projects</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-card__value">5</span>
+                        <span class="stat-card__label">Dev Communities</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-card__value">'28</span>
+                        <span class="stat-card__label">RVCE Graduation</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-card__value">Open</span>
+                        <span class="stat-card__label">To Work Opportunities</span>
+                    </div>
+                </div>
+            </div>
         </section>
 
-        <section id="skills" class="skills"></section>
+        <section id="projects" class="projects section">
+            <div class="section__header">
+                <span class="section__tag">02 — projects</span>
+                <h2 class="section__title">What I've built.</h2>
+                <div class="section__divider"></div>
+            </div>
 
-        <section id="projects" class="projects"></section>
+            <div class="projects__grid">
 
-        <section id="timeline" class="timeline"></section>
+                <article class="project-card">
+                    <div class="project-card__header">
+                        <span class="project-card__number">01</span>
+                        <div class="project-card__links">
+                            <a href="https://github.com/KrishJeswal/Synaptic-BioMemristor" target="_blank" rel="noopener">GitHub ↗</a>
+                        </div>
+                    </div>
+                    <h3 class="project-card__title">Synaptic-BioMemristor</h3>
+                    <p class="project-card__desc">Hardware-software platform to characterize a bio-ionic memristor using ESP32 + INA219. Measured I-V hysteresis, ON/OFF ratio, and synaptic behavior, then trained a scikit-learn regression model to predict conductance states.</p>
+                    <div class="project-card__stack">
+                        <span>ESP32</span>
+                        <span>INA219</span>
+                        <span>Python</span>
+                        <span>scikit-learn</span>
+                    </div>
+                </article>
 
-        <section id="contact" class="contact"></section>
+                <article class="project-card">
+                    <div class="project-card__header">
+                        <span class="project-card__number">02</span>
+                        <div class="project-card__links">
+                            <a href="https://github.com/KrishJeswal/MoodVue" target="_blank" rel="noopener">GitHub ↗</a>
+                        </div>
+                    </div>
+                    <h3 class="project-card__title">MoodVue</h3>
+                    <p class="project-card__desc">Real-time emotion detection app powered by DeepFace and OpenCV via an async Flask backend. Mood history tracked over time and visualized with Recharts. Auth and persistence via Supabase, deployed on Vercel + Render.</p>
+                    <div class="project-card__stack">
+                        <span>React 18</span>
+                        <span>TypeScript</span>
+                        <span>Flask</span>
+                        <span>DeepFace</span>
+                        <span>Supabase</span>
+                        <span>Docker</span>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <div class="project-card__header">
+                        <span class="project-card__number">03</span>
+                        <div class="project-card__links">
+                            <a href="https://iete-rvce.vercel.app/" target="_blank" rel="noopener">Live ↗</a>
+                            <a href="https://github.com/KrishJeswal/iete-rvce-website" target="_blank" rel="noopener">GitHub ↗</a>
+                        </div>
+                    </div>
+                    <h3 class="project-card__title">IETE-RVCE Website</h3>
+                    <p class="project-card__desc">Official website for the RVCE student chapter of IETE. Built with React + TypeScript and a Vercel serverless join pipeline backed by Postgres. Animated with Framer Motion throughout.</p>
+                    <div class="project-card__stack">
+                        <span>React</span>
+                        <span>TypeScript</span>
+                        <span>Tailwind</span>
+                        <span>Framer Motion</span>
+                        <span>PostgreSQL</span>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <section id="skills" class="skills section">
+            <div class="section__header">
+                <span class="section__tag">03 — skills</span>
+                <h2 class="section__title">What I work with.</h2>
+                <div class="section__divider"></div>
+            </div>
+
+            <div class="skills__grid">
+
+                <div class="skills__group">
+                    <h3 class="skills__category">Languages</h3>
+                    <div class="skills__tags">
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">C</span>
+                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">TypeScript</span>
+                        <span class="skill-tag">Verilog</span>
+                    </div>
+                </div>
+
+                <div class="skills__group">
+                    <h3 class="skills__category">Frontend</h3>
+                    <div class="skills__tags">
+                        <span class="skill-tag">React</span>
+                        <span class="skill-tag">Tailwind CSS</span>
+                        <span class="skill-tag">Vite</span>
+                        <span class="skill-tag">Three.js</span>
+                        <span class="skill-tag">Framer Motion</span>
+                    </div>
+                </div>
+
+                <div class="skills__group">
+                    <h3 class="skills__category">Backend</h3>
+                    <div class="skills__tags">
+                        <span class="skill-tag">Node.js</span>
+                        <span class="skill-tag">Express</span>
+                        <span class="skill-tag">REST API</span>
+                        <span class="skill-tag">Flask</span>
+                        <span class="skill-tag">Docker</span>
+                    </div>
+                </div>
+
+                <div class="skills__group">
+                    <h3 class="skills__category">Databases &amp; Tools</h3>
+                    <div class="skills__tags">
+                        <span class="skill-tag">PostgreSQL</span>
+                        <span class="skill-tag">Supabase</span>
+                        <span class="skill-tag">Firebase</span>
+                        <span class="skill-tag">Git</span>
+                        <span class="skill-tag">GCP</span>
+                    </div>
+                </div>
+
+                <div class="skills__group">
+                    <h3 class="skills__category">ML / Data</h3>
+                    <div class="skills__tags">
+                        <span class="skill-tag">NumPy</span>
+                        <span class="skill-tag">Pandas</span>
+                        <span class="skill-tag">scikit-learn</span>
+                        <span class="skill-tag">OpenCV</span>
+                        <span class="skill-tag">Streamlit</span>
+                        <span class="skill-tag">Vertex AI</span>
+                    </div>
+                </div>
+
+                <div class="skills__group">
+                    <h3 class="skills__category">Electronics</h3>
+                    <div class="skills__tags">
+                        <span class="skill-tag">Arduino</span>
+                        <span class="skill-tag">ESP32</span>
+                        <span class="skill-tag">FPGA</span>
+                        <span class="skill-tag">UART</span>
+                        <span class="skill-tag">LTSpice</span>
+                        <span class="skill-tag">KiCAD</span>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="timeline" class="timeline section">
+            <div class="section__header">
+                <span class="section__tag">04 — timeline</span>
+                <h2 class="section__title">Where I've been.</h2>
+                <div class="section__divider"></div>
+            </div>
+
+            <div class="timeline__inner">
+
+                <div class="timeline__item timeline__item--left">
+                    <div class="timeline__card">
+                        <p class="timeline__date">Nov 2025 – Present</p>
+                        <p class="timeline__role">The Institution of Electronics and Telecommunication Engineers (IETE)</p>
+                        <p class="timeline__org">Member</p>
+                        <p class="timeline__desc">Led the development team for the official student forum website, overseeing architecture and end-to-end delivery.</p>
+                    </div>
+                    <div class="timeline__spacer"></div>
+                </div>
+
+                <div class="timeline__item timeline__item--right">
+                    <div class="timeline__spacer"></div>
+                    <div class="timeline__card">
+                        <p class="timeline__date">Jun 2025 – Present</p>
+                        <p class="timeline__role">Google Developer Groups</p>
+                        <p class="timeline__org">Research &amp; Projects</p>
+                        <p class="timeline__desc">GCP Study Jams across compute, storage and ML tooling. Co-volunteered at Vision 2047 Hackathon.</p>
+                    </div>
+                </div>
+
+                <div class="timeline__item timeline__item--left">
+                    <div class="timeline__card">
+                        <p class="timeline__date">Dec 2024 – Present</p>
+                        <p class="timeline__role">Coding Club, RVCE</p>
+                        <p class="timeline__org">Member</p>
+                        <p class="timeline__desc">Algorithms, DSA, competitive programming, hackathons and CTFs.</p>
+                    </div>
+                    <div class="timeline__spacer"></div>
+                </div>
+
+                <div class="timeline__item timeline__item--right">
+                    <div class="timeline__spacer"></div>
+                    <div class="timeline__card">
+                        <p class="timeline__date">2024 – 2028</p>
+                        <p class="timeline__role">R.V. College of Engineering</p>
+                        <p class="timeline__org">Electronics &amp; Telecommunication · Bengaluru</p>
+                        <p class="timeline__desc">Undergraduate — currently in second year.</p>
+                    </div>
+                </div>
+
+                <div class="timeline__item timeline__item--left">
+                    <div class="timeline__card">
+                        <p class="timeline__date">2009 – 2023</p>
+                        <p class="timeline__role">Amity International School</p>
+                        <p class="timeline__org">Ghaziabad, India</p>
+                        <p class="timeline__desc">Physics, Chemistry, Maths and Computer Science — Higher Secondary.</p>
+                    </div>
+                    <div class="timeline__spacer"></div>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="contact" class="contact section">
+            <div class="section__header">
+                <span class="section__tag">05 — contact</span>
+                <h2 class="section__title">Let's connect.</h2>
+                <div class="section__divider"></div>
+            </div>
+
+            <div class="contact__inner">
+
+                <div class="contact__info">
+                    <p>I'm currently open to internship and work opportunities. If you're working on something interesting or just want to talk tech, reach out — I'm always up for a good conversation.</p>
+                    <a href="mailto:connectwithkjeswal@gmail.com" class="contact__email">connectwithkjeswal@gmail.com</a>
+                    <div class="contact__socials">
+                        <a href="https://github.com/KrishJeswal" target="_blank" rel="noopener">GitHub — KrishJeswal</a>
+                        <a href="https://linkedin.com/in/krishjeswal" target="_blank" rel="noopener">LinkedIn — krishjeswal</a>
+                        <a href="https://krishjeswal.web.app" target="_blank" rel="noopener">krishjeswal.web.app</a>
+                    </div>
+                </div>
+
+                <form class="contact__form" action="https://formspree.io/f/xwvwddyv" method="POST">
+                    <div class="form__group">
+                        <label class="form__label" for="name">Name</label>
+                        <input class="form__input" type="text" id="name" name="name" placeholder="Your name" required />
+                    </div>
+                    <div class="form__group">
+                        <label class="form__label" for="email">Email</label>
+                        <input class="form__input" type="email" id="email" name="email" placeholder="your@email.com" required />
+                    </div>
+                    <div class="form__group">
+                        <label class="form__label" for="message">Message</label>
+                        <textarea class="form__textarea" id="message" name="message" placeholder="What's on your mind?" required></textarea>
+                    </div>
+                    <button type="submit" class="form__submit">Send Message →</button>
+                </form>
+
+            </div>
+        </section>
+
     </main>
 
     <footer>
-        <p>&copy; 2026 Krish Jeswal. All rights reserved.</p>
+        <p>&copy; 2026 <span>Krish Jeswal</span>. All rights reserved.</p>
     </footer>
 
     <script src="script.js"></script>
